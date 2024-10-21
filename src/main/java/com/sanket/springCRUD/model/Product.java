@@ -1,6 +1,13 @@
 package com.sanket.springCRUD.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import org.springframework.stereotype.Component;
+
+@Component
+@Entity
 public class Product {
+    @Id
     private int prodID;
     private String prodName;
     private int price;
@@ -13,6 +20,8 @@ public class Product {
                 ", price=" + price +
                 '}';
     }
+
+    public Product(){}
 
     public Product(int prodID, String prodName, int price) {
         this.prodID = prodID;
